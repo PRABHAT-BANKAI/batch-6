@@ -1,0 +1,32 @@
+<!-- Output show Method console.log Document write Alert Inner HTML -->
+<!-- .class p  #id  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #text {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="text">Javascript</h1>
+    <p>
+      1. Javascript is a single threaded language code run top to bottom line by
+      line execution reason is becuase of interpreter
+    </p>
+    <p>Dynamic type language or week type langyage and case sensitive</p>
+    <div id="extra-text"></div>
+    <script src="./script.js"></script>
+    <script>
+      document.write("<h2> heading 2</h2>");
+
+      // alert("hello from javascript ");
+      let paragraph = document.getElementById("extra-text");
+      paragraph.innerHTML = "<h1>hello from tom and jerry</h1>"; // innerHTML / innerText
+    </script>
+  </body>
+</html>
