@@ -47,3 +47,14 @@ let result5 = array.every((item)=>{
 
 
 console.log(result5)
+
+
+
+let sum = 0
+
+
+array.forEach(element => {
+  sum+= element
+});
+
+console.log(sum)
