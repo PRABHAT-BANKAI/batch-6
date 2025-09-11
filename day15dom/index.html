@@ -1,0 +1,53 @@
+<!-- 
+ DOM HTML DOM Changed query Selector and querySelectorsAll AddEventListner -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 150px;
+        width: 150px;
+        border: 1px solid rgb(40, 241, 208);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM (document object model)</h1>
+
+    <!-- <p id="text"></p>
+
+    <div class="qoute"></div>
+    <div class="qoute"></div>
+    <div class="qoute"></div>
+    <div class="qoute"></div> -->
+
+    <button class="btn">show color</button>
+    <div class="box"></div>
+
+    <script>
+      // let text = document.querySelector("#text");
+      // text.innerHTML = "<h1> batman </h1>";
+      // text.style.color = "red";
+      // text.style.backgroundColor = "yellow";
+
+      // let qoute = document.querySelectorAll(".qoute");
+
+      // for(let i=0;i<qoute.length;i++){
+      //   qoute[i].innerText =`item ${i}`
+      // }
+
+      let btn = document.querySelector(".btn");
+
+      btn.addEventListener("click", () => {
+        let box = document.querySelector(".box");
+        let value1 = Math.floor(Math.random() * 10);
+        let value2 = Math.floor(Math.random() * 10);
+        let value3 = Math.floor(Math.random() * 10);
+        box.style.backgroundColor = `rgb(${value1}0, 2${value2}1, ${value3}08)`;
+      });
+    </script>
+  </body>
+</html>
