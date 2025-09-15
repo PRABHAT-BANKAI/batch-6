@@ -1,0 +1,30 @@
+<!-- All queryselector with some example -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+      let allData = document.querySelectorAll("p");
+
+      let array = ["adidas", "nike", "skecthers", "puma", "reebok", "jorden"];
+
+      for (let i = 0; i < allData.length; i++) {
+        allData[i].innerText = array[i];
+      }
+
+      console.log(allData);
+    </script>
+  </body>
+</html>
