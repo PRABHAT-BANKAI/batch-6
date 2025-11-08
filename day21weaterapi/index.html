@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Temperature</h1>
+    <input id="text" type="text" />
+    <button id="btn">search</button>
+
+    <div>
+      <p>place: <span id="place"></span></p>
+      <p>Temperature: <span id="temp"></span></p>
+    </div>
+    <script>
+      let text = document.querySelector("#text");
+
+      let btn = document.querySelector("#btn");
+      let temp = document.querySelector("#temp");
+      let place = document.querySelector("#place");
+
+      btn.addEventListener("click", fetchData);
+
+      //ES6 promise   .then.catch   //async await
+      async function fetchData() {
+        if (text.value === "") {
+          alert("first you enter your location");
+          return;
+        }
+        let url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${text.value}`;
+        let apikey = "ee00f0931ee9d5bf60ca286cbd6c50f1";
+        let response = await fetch(url + `&appid=${apikey}`);
+
+        let result = await response.json();
+
+        console.log(result);
+        temp.innerText = result.main.temp;
+        place.innerText = result.name;
+
+        text.value = "";
+      }
+    </script>
+  </body>
+</html>
