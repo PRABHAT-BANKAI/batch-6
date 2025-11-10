@@ -43,7 +43,7 @@
 
 //|| operator (or) return true
 
-console.log(0 ||  55 || 5 > 1 || 6 > 1 || 75)
+// console.log(0 ||  55 || 5 > 1 || 6 > 1 || 75)
 
 
 
@@ -53,10 +53,21 @@ console.log(0 ||  55 || 5 > 1 || 6 > 1 || 75)
 
 console.log(12+"1")// concatenate
 console.log(12-"1")
+console.log("123"+1+153)
+
+
+console.log(5-false)// false == 0
+console.log(5-true)// true == 1
 
 
 
-let number = "12"
-console.log(typeof number)
-let result = Number(number)
-console.log(result)
+// let number = "12"
+// console.log(typeof number)
+// let result = Number(number)
+// console.log(result)
+
+
+let string = "asd"
+
+let result = Number(string)
+console.log(typeof result)//NaN not a number
